@@ -131,6 +131,75 @@ function cuadrados(arr) {
         }
     return arr;
 }
-
 console.log(cuadrados([1, 5, 10,-2]));
 
+// 10.- Negativos: Dado un array con múltiples valores, escribe una función que reemplace cualquier número negativo dentro del array por 0. Cuando el programa esté listo, el array no debiera contener números negativos 
+// (ej: [1,5,10,-2] se convertirá en [1,5,10,0]).
+function zero_neg(arr) {
+    console.log("Reemplaza negativos por cero")
+    
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i]<0){
+            arr[i]=0;
+        }
+        else{
+            arr[i]=arr[i]
+        }
+        
+        }
+    return arr;
+}
+console.log(zero_neg([1, -5, 10,-2]));
+
+// 11.-Max/Min/Avg: Dado un array con múltiples valores, escribe una función que devuelva un nuevo array que solo contenga el valor mayor (max), menor (min) y promedio (avg) del array original 
+// (ej: [1,5,10,-2] devolverá [10,-2,3.5]).
+function mxminavg(arr) {
+    console.log("Delvuelve MAX/MIN/AVG del array")
+    max = arr[0];
+    min = arr[0];
+    sum = arr[0];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i]>max){
+            sum+=arr[i];
+            max=arr[i];
+        }
+        else if (arr[i]<min){
+            sum+=arr[i];
+            min=arr[i];
+        }
+        
+        }
+    return [max,min,(sum/arr.length)];
+}
+console.log(mxminavg([1, 5, 10,-2]));
+
+// 12.- Intercambia Valores: Escribe una función que intercambie el primer y el último valor de cualquier array. La extensión mínima predeterminada del array es 2 
+// (ej: [1,5,10,-2] será [-2,5,10,1]). 
+function swap(arr) {
+    console.log("Intercambia primer y ulimo valor de cualquier array")
+    temp = arr[0];
+    arr[0] = arr[arr.length-1];
+    arr[arr.length-1] = temp;
+
+    return arr;
+}
+console.log(swap([1, 5, 10,-2]));
+
+
+// 13.- De Número a String: Escribe una función que tome un array de números y reemplace cualquier valor negativo por el string ‘Dojo’. 
+// Por ejemplo, dado el array = [-1,-3,2], tu función devolverá [‘Dojo’,‘Dojo’,2].
+function neg_str(arr) {
+    console.log("Reemplaza negativos por 'Dojo'")
+    
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i]<0){
+            arr[i]="Dojo";
+        }
+        else{
+            arr[i]=arr[i]
+        }
+        
+        }
+    return arr;
+}
+console.log(neg_str([1, -5, 10,-2]));
