@@ -202,4 +202,5 @@ function neg_str(arr) {
         }
     return arr;
 }
+
 console.log(neg_str([1, -5, 10,-2]));
