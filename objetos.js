@@ -1,6 +1,7 @@
 
-var users = [{ name: "Michael", age: 37 }, { name: "John", age: 30 }, { name: "David", age: 27 }];
+var users = [{ name: "Michael", age: 37 }, { name: "Angel", age: 30 }, { name: "David", age: 27 }];
 users.push({ name: "Isabella", age: 7 })
+
 
 // ¿Cómo harías print/log de la edad de John?
 console.log("La edad de John es: ", users[1].age)
